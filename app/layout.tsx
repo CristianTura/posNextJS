@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import Providers from "./provider";
 
 const outfit = Outfit({
   // variable: "--font-outfit",
@@ -14,11 +15,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${outfit.className} bg-gray-200`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="es">
+      <body className={`${outfit.className} bg-gray-200`}>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }
