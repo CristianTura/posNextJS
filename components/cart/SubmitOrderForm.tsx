@@ -1,6 +1,3 @@
-
-
-
 import { submitOrderAction } from "@/actions/submit-order-action"
 import { useStore } from "@/src/store"
 import { useActionState, useEffect, useRef } from "react"
