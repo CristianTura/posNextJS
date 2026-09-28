@@ -1,7 +1,7 @@
 
 import { CartItem } from "@/src/schemas"
 import Image from "next/image"
-import { formatCurrency } from "@/src/utils"
+import { formatCurrency, getImagePath } from "@/src/utils"
 import { useStore } from "@/src/store"
 
 export default function ShoppingCartItem({item}: {item: CartItem}) {
@@ -11,7 +11,7 @@ export default function ShoppingCartItem({item}: {item: CartItem}) {
     return (
         <li className="flex items-center space-x-6 py-6 relative">
             <div className='h-24 w-24'>
-                <Image src={`${process.env.NEXT_PUBLIC_API_URL}/img/${item.image}`} alt={item.name} width={100} height={100} priority/>
+                <Image src={getImagePath(item.image)} alt={item.name} width={100} height={100} priority/>
             </div>
             <div className="flex-auto space-y-2">
                 <h3 className="text-gray-900">
