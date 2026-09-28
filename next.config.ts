@@ -5,19 +5,12 @@ const nextConfig: NextConfig = {
     unoptimized: true,
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: process.env.DOMAIN!,
-        port: "4000",
+        protocol: "https",
+        hostname: 'posnest-tbsm.onrender.com'
       },
       {
         protocol: "https",
-        hostname: process.env.DOMAIN!,
-        port: "4000",
-      },
-      {
-        protocol: "https",
-        hostname: "rest.cloudinary.com",
-        port: "",
+        hostname: "rest.cloudinary.com"
       }
     ],
   },
